@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_app/pages/home_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:new_app/pages/loginpage.dart';
 
 void main() {
@@ -12,18 +13,18 @@ class MyApp extends StatelessWidget {
     int days = 30;
     String name = "rajat";
     return MaterialApp(
-      
-      themeMode: ThemeMode.dark,
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
-      darkTheme: ThemeData(
-        brightness: Brightness.light,
-        primarySwatch: Colors.deepPurple,
-      ),
-      routes:{
-        "/":(context)=>loginpage(),
-        
-        "/login":(context)=>loginpage(),
-      }
-    );
+        themeMode: ThemeMode.dark,
+        theme: ThemeData(
+            primarySwatch: Colors.deepPurple,
+            fontFamily:GoogleFonts.bungee().fontFamily,
+            ),
+        darkTheme: ThemeData(
+          brightness: Brightness.light,
+          primarySwatch: Colors.deepPurple,
+        ),
+        routes: {
+          "/": (context) => loginpage(),
+          "/login": (context) => loginpage(),
+        });
   }
 }
